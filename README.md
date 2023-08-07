@@ -1,2 +1,2 @@
-# alfa-expects
-Weather forecast with just  a little bit extra
+# Alfa Expects
+Weather forecast with just a little bit extra.
