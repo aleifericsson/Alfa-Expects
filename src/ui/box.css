@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSansCondensed-Regular.ttf'),
+      url('../fonts/FiraSansCondensed-Italic.ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.box{
+    display:flex;
+    flex-direction: column;
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    background-color: #242424;
+    justify-content: space-between;
+    font-family: 'Fira Sans', sans-serif;
+    color: whitesmoke;
+    align-items: center;
+    padding:5px;
+}
+
+.title{
+    font-style:italic;
+    font-weight:700;   
+    font-size: 30px; 
+}
+
+@media screen and (min-width:1000px) {
+    .box{
+        position: absolute;
+        height:250px;
+        width:350px;
+        top:40vh;
+        left: 25vw;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .box{
+        width:350px;
+        height:250px;
+        align-self: center;
+    }
+}
