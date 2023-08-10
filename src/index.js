@@ -1,6 +1,7 @@
 import './style.css';
 import background from './ui/background';
+import config from './config';
 
-//test
+console.log(config.MY_KEY);
 
 document.body.appendChild(background());

@@ -1,4 +1,7 @@
 import './box.css';
+import form from './form.js';
+import weatherDisp from './weatherDisp';
+
 
 
 const box = () => {
@@ -9,7 +12,8 @@ const box = () => {
     title.classList.add("title");
     title.textContent = "Alfa Expects";
     frame.appendChild(title);
-
+    frame.appendChild(weatherDisp());
+    frame.appendChild(form());
     
     return frame;
 }

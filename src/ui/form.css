@@ -1,0 +1,14 @@
+.form{
+    display:flex;
+    justify-content: space-evenly;
+    width:auto;
+    margin:0px 25px;
+    padding-top:30px;
+    gap:10px;
+    font-size:20px;
+}
+
+.input-city{
+    border-radius: 5px;
+    border: 0;
+}

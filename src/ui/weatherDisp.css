@@ -1,0 +1,21 @@
+.weatherDisp{
+    align-self:flex-start;
+    margin:0px 25px;
+}
+
+.city{
+    font-weight:400;   
+    font-size: 30px; 
+}
+
+.weatherStack{
+    display:flex;
+    justify-content: space-evenly;
+    width:auto;
+    gap:10px;
+}
+
+.weatherDay{
+    margin:0px;
+    font-size: 20px;
+}
