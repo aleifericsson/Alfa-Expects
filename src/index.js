@@ -1,7 +1,7 @@
 import './style.css';
 import background from './ui/background.js';
-import config from './config.js';
-
-console.log(config.MY_KEY);
+import api from './scripts/api.js';
 
 document.body.appendChild(background());
+
+console.log(api("london"));
