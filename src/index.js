@@ -1,6 +1,6 @@
 import './style.css';
-import background from './ui/background';
-import config from './config';
+import background from './ui/background.js';
+import config from './config.js';
 
 console.log(config.MY_KEY);
 
