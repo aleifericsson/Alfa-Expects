@@ -4,4 +4,10 @@ import api from './scripts/api.js';
 
 document.body.appendChild(background());
 
-console.log(api("london"));
+async function ha(){
+    const huh = await api("london");
+    console.log(huh);
+}
+
+ha();
+
