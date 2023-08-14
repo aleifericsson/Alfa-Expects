@@ -43,3 +43,8 @@
         align-self: center;
     }
 }
+
+.form-text{
+    font-size:20px;
+    margin:0;
+}

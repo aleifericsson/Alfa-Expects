@@ -5,7 +5,7 @@ import api from './scripts/api.js';
 document.body.appendChild(background());
 
 async function ha(){
-    const huh = await api("london");
+    const huh = await api();
     console.log(huh);
 }
 

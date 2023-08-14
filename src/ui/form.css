@@ -1,14 +1,32 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSansCondensed-Regular.ttf'),
+      url('../fonts/FiraSansCondensed-Italic.ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 .form{
     display:flex;
     justify-content: space-evenly;
     width:auto;
-    margin:0px 25px;
-    padding-top:30px;
+    padding-top:5px;
     gap:10px;
-    font-size:20px;
 }
 
-.input-city{
+#city{
     border-radius: 5px;
     border: 0;
+    font-size:15px;
+    font-family: 'Fira Sans';
+}
+
+#submit{
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color: #242424;
+    font-weight: 600;
+    color: whitesmoke;
+    font-size:15px;
+    font-family: 'Fira Sans';
 }

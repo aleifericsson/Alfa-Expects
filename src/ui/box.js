@@ -13,8 +13,18 @@ const box = () => {
     title.textContent = "Alfa Expects";
     frame.appendChild(title);
     frame.appendChild(weatherDisp());
-    frame.appendChild(form());
+
+    const frame2 = document.createElement("div");
+    frame2.classList.add("frame-deux");
+
+    const text = document.createElement("div");
+    text.classList.add("form-text");
+    text.textContent = "Enter a city:";
+    frame2.appendChild(text);
+    frame2.appendChild(form());
     
+    frame.appendChild(frame2);
+
     return frame;
 }
 

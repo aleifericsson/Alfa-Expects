@@ -1,6 +1,6 @@
 .weatherDisp{
     align-self:flex-start;
-    margin:0px 25px;
+    margin:0px 35px;
 }
 
 .city{
@@ -12,7 +12,7 @@
     display:flex;
     justify-content: space-evenly;
     width:auto;
-    gap:10px;
+    gap:20px;
 }
 
 .weatherDay{

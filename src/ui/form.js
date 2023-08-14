@@ -2,18 +2,20 @@ import './form.css';
 
 
 const form = () => {
-    const frame = document.createElement("div");
+    const frame = document.createElement("form");
     frame.classList.add("form");
-
-    const text = document.createElement("div");
-    text.classList.add("form-text");
-    text.textContent = "Enter a city:";
-    frame.appendChild(text);
 
     const city_inp = document.createElement("input");
     city_inp.setAttribute("type", "text");
-    city_inp.classList.add("input-city");
+    city_inp.setAttribute("id","city");
+    city_inp.setAttribute("name","city");
     frame.appendChild(city_inp);
+
+    const submit = document.createElement("input");
+    submit.setAttribute("type","submit");
+    submit.setAttribute("id","submit");
+    submit.textContent = "Submit";
+    frame.appendChild(submit);
 
     
     return frame;
