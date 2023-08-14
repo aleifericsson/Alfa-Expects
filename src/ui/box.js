@@ -1,6 +1,6 @@
 import './box.css';
 import form from './form.js';
-import weatherDisp from './weatherDisp';
+import {weatherDisp} from './weatherDisp';
 
 
 

@@ -1,5 +1,7 @@
 import decrypt from '../config.js';
-import mystery from './mystery.js'
+import mystery from './mystery.js';
+import Day from './day.js';
+import {updateDays} from '../ui/weatherDisp.js';
 
 const api = async () => {
     let city;
@@ -29,7 +31,16 @@ const api = async () => {
     const response3 = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${city_lat}&lon=${city_lon}&exclude=minutely,alerts&units=metric&appid=${myst}`);
     const weather_info = await response3.json();
 
-    return weather_info;
+    return [city_info,weather_info];
 }
 
-export default api;
+let day_list = []
+
+const crunchData = (city_dat,wea_dat) => {
+    day_list = [];
+    wea_dat.daily.forEach(dail => day_list.push(new Day(city_dat.name,city_dat.sys.country,dail.dt,dail.weather[0].main,dail.temp.day)));
+    console.log(day_list);
+    updateDays();
+}
+
+export {api,crunchData,day_list};

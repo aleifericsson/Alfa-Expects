@@ -1,30 +1,43 @@
 import './weatherDisp.css';
+import {day_list} from '../scripts/api';
 
-
+let day_disp_list = [];
 const weatherDisp = () => {
     const frame = document.createElement("div");
     frame.classList.add("weatherDisp");
 
     const city = document.createElement("div");
     city.classList.add("city");
-    city.textContent = "London, UK";
+    city.textContent = "Manchester, GB";
     frame.appendChild(city);
 
     const stack = document.createElement("div");
     stack.classList.add("weatherStack");
 
-    let day_list = [];
     for (let i = 0; i < 5; i++){
-        day_list.push(weatherDay("Mon","☁️","25°C"))
+        day_disp_list.push(weatherDay("Mon","☁️","25 °C"))
     }
 
-    day_list.forEach(day => stack.appendChild(day));
+    day_disp_list.forEach(day => stack.appendChild(day));
 
     frame.appendChild(stack);
     
     return frame;
 }
 
+const updateDays = () => {
+    const stack = document.querySelector(".weatherStack");
+    stack.innerHTML = "";
+    day_disp_list = [];
+    for (let i = 0; i < 5; i++){
+        const cur = day_list[i];
+        day_disp_list.push(weatherDay(cur.day,"☁️",cur.day_temp))
+    }
+    day_disp_list.forEach(day => stack.appendChild(day));
+
+    const city = document.querySelector(".city");
+    city.textContent = `${day_list[0].city}, ${day_list[0].country}`
+}
 
 const weatherDay = (day,icon,hotness) => {
     const frame = document.createElement("div");
@@ -45,17 +58,4 @@ const weatherDay = (day,icon,hotness) => {
     return frame;
 }
 
-function Day(city,country,epoch,wea_desc,day_temp){
-    var utcSeconds = epoch;
-    var d = new Date(0);
-    d.setUTCSeconds(utcSeconds);
-
-    this.city = city;
-    this.country = country;
-    this.day = d.getDay();
-    this.wea_desc = wea_desc;
-    this.day_temp = Math.round(day_temp);
-
-}
-
-export default weatherDisp;
+export {weatherDisp,updateDays};

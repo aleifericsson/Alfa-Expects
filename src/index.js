@@ -1,12 +1,12 @@
 import './style.css';
 import background from './ui/background.js';
-import api from './scripts/api.js';
+import {api,crunchData} from './scripts/api.js';
 
 document.body.appendChild(background());
 
 async function ha(){
-    const huh = await api();
-    console.log(huh);
+    const data = await api();
+    crunchData(data[0],data[1]);
 }
 
 ha();
