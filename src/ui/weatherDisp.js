@@ -1,5 +1,6 @@
 import './weatherDisp.css';
 import {day_list} from '../scripts/api';
+import loading from '../images/loading.svg'
 
 let day_disp_list = [];
 const weatherDisp = () => {
@@ -8,17 +9,28 @@ const weatherDisp = () => {
 
     const city = document.createElement("div");
     city.classList.add("city");
-    city.textContent = "Manchester, GB";
+    city.textContent = "";
     frame.appendChild(city);
 
     const stack = document.createElement("div");
     stack.classList.add("weatherStack");
+    
+    const l = document.createElement("div");
+    l.classList.add("loading");
+    l.textContent = "Loading...";
+    stack.appendChild(l);
+    const load = new Image();
+    load.src = loading;
+    load.classList.add("load-image");
+    stack.appendChild(load);
 
+    /*
     for (let i = 0; i < 5; i++){
-        day_disp_list.push(weatherDay("Mon","☁️","25 °C"))
+        day_disp_list.push(weatherDay("Mon","01","25 °C"))
     }
 
     day_disp_list.forEach(day => stack.appendChild(day));
+    */
 
     frame.appendChild(stack);
     
@@ -31,7 +43,7 @@ const updateDays = () => {
     day_disp_list = [];
     for (let i = 0; i < 5; i++){
         const cur = day_list[i];
-        day_disp_list.push(weatherDay(cur.day,"☁️",cur.day_temp))
+        day_disp_list.push(weatherDay(cur.day,cur.icon,cur.day_temp))
     }
     day_disp_list.forEach(day => stack.appendChild(day));
 
@@ -47,9 +59,10 @@ const weatherDay = (day,icon,hotness) => {
     day_div.textContent = day;
     frame.appendChild(day_div);
 
-    const icon_div = document.createElement("div");
-    icon_div.textContent = icon;
-    frame.appendChild(icon_div);
+    const img = new Image();
+    img.src = icon;
+    img.classList.add("icon");
+    frame.appendChild(img);
 
     const hot_div = document.createElement("div");
     hot_div.textContent = hotness;

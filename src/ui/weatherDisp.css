@@ -8,6 +8,17 @@
     font-size: 30px; 
 }
 
+.loading{
+    font-weight:400;   
+    font-size: 30px; 
+    position: relative;
+    left:80px;
+}
+.load-image{
+    position:relative;
+    left:-50px;
+}
+
 .weatherStack{
     display:flex;
     justify-content: space-evenly;
@@ -19,4 +30,8 @@
     margin:0px;
     font-size: 20px;
     white-space: nowrap;
+}
+
+.icon{
+    font-size: 40px;
 }

@@ -38,8 +38,7 @@ let day_list = []
 
 const crunchData = (city_dat,wea_dat) => {
     day_list = [];
-    wea_dat.daily.forEach(dail => day_list.push(new Day(city_dat.name,city_dat.sys.country,dail.dt,dail.weather[0].main,dail.temp.day)));
-    console.log(day_list);
+    wea_dat.daily.forEach(dail => day_list.push(new Day(city_dat.name,city_dat.sys.country,dail.dt,dail.weather[0].icon,dail.temp.day)));
     updateDays();
 }
 
