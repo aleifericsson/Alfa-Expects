@@ -7,6 +7,7 @@ import {weatherDisp} from './weatherDisp';
 const box = () => {
     const frame = document.createElement("div");
     frame.classList.add("box");
+    frame.classList.remove("right-side");
 
     const title = document.createElement("div");
     title.classList.add("title");
@@ -28,4 +29,16 @@ const box = () => {
     return frame;
 }
 
-export default box;
+const updateBox = (lon) => {
+    const the_box = document.querySelector(".box");
+    if (lon <= 5.725){
+        the_box.classList.add("right-side");
+        the_box.classList.remove("left-side");
+    }
+    else{
+        the_box.classList.remove("right-side");
+        the_box.classList.add("left-side");
+    }
+}
+
+export {box,updateBox};

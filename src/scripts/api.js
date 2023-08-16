@@ -2,6 +2,8 @@ import decrypt from '../config.js';
 import mystery from './mystery.js';
 import Day from './day.js';
 import {updateDays} from '../ui/weatherDisp.js';
+import {updateBox} from '../ui/box.js';
+import {updatePin} from '../ui/background.js';
 
 const api = async () => {
     let city;
@@ -27,6 +29,9 @@ const api = async () => {
 
     const city_lon = city_info.coord.lon;
     const city_lat = city_info.coord.lat;
+
+    updateBox(city_lon);
+    updatePin(city_lon,city_lat);
 
     const response3 = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${city_lat}&lon=${city_lon}&exclude=minutely,alerts&units=metric&appid=${myst}`);
     const weather_info = await response3.json();

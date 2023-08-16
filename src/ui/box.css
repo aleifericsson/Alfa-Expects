@@ -17,6 +17,8 @@
     color: whitesmoke;
     align-items: center;
     padding:5px;
+    transition: cubic-bezier(1,0,0,1);
+    transition-duration: 500ms;
 }
 
 .title{
@@ -31,8 +33,15 @@
         height:250px;
         width:350px;
         top:40vh;
-        left: 25vw;
         transform: translate(-50%, -50%);
+    }
+
+    .left-side{
+        left: 25vw;
+    }
+
+    .right-side{
+        left:75vw;
     }
 }
 

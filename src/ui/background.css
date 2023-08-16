@@ -6,9 +6,13 @@
 }
 
 .map{
-    width:99vw;
-    height:auto;
-    vertical-align: middle;
+    width:100vw;
+    position:absolute;
+    height:48.7vw;
+    background-size:cover;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width:1000px) {
@@ -32,3 +36,11 @@
         position:relative;
     }
 }
+
+.line {
+    position:absolute;
+    height:100%;
+    left: 50%;
+    color:red;
+    border-left: 1px solid red;
+ }
