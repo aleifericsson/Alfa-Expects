@@ -31,7 +31,7 @@ const box = () => {
 
 const updateBox = (lon) => {
     const the_box = document.querySelector(".box");
-    if (lon <= 5.725){
+    if (lon <= 14){
         the_box.classList.add("right-side");
         the_box.classList.remove("left-side");
     }

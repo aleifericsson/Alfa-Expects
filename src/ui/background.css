@@ -8,11 +8,12 @@
 .map{
     width:100vw;
     position:absolute;
-    height:48.7vw;
+    height:50.75vw;
     background-size:cover;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+    border:1px solid red;
 }
 
 @media screen and (max-width:1000px) {
@@ -43,4 +44,22 @@
     left: 50%;
     color:red;
     border-left: 1px solid red;
+ }
+
+
+.line2 {
+    position:absolute;
+    top:50%;
+    width:100%;
+    color:red;
+    border-bottom: 1px solid red;
+ }
+
+ .map-box{
+    position:absolute;
+    top:4.2%;
+    left:3.6%;
+    width:90.9%;
+    height:90.4%;
+    border:1px solid red;
  }
