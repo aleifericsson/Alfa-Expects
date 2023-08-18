@@ -21,7 +21,7 @@
 
 .weatherStack{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width:auto;
     gap:20px;
 }
@@ -30,6 +30,9 @@
     margin:0px;
     font-size: 20px;
     white-space: nowrap;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .icon{

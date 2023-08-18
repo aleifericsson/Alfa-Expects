@@ -16,17 +16,6 @@ const background = () => {
 
     frame.appendChild(map_ele);
     frame.appendChild(box());
-    const space = document.createElement("div");
-    space.classList.add("space");
-    frame.appendChild(space);
-
-    const line = document.createElement("div");
-    line.classList.add("line");
-    frame.appendChild(line);
-
-    const line2 = document.createElement("div");
-    line2.classList.add("line2");
-    map_ele.appendChild(line2);
 
     const map_box = document.createElement("div");
     map_box.classList.add("map-box");
@@ -37,28 +26,42 @@ const background = () => {
     the_pin.classList.add("pin");
     map_box.appendChild(the_pin);
 
+    
+    const space = document.createElement("div");
+    space.classList.add("space");
+    frame.appendChild(space);
+
     return frame;
 }
 
 const updatePin = (lon,lat) => {
     console.log(lon,lat)
     const my_pin = document.querySelector(".pin");
-    let nlon = (lon - 14);
+
+    /*
+    let nlon = (lon - 11.7);
     if (nlon<=-180){
         nlon = nlon + 180;
     }
-    let nlat = (lat + 1);
+    let nlat = (lat + 5.3);
     if (nlat>=90){
         nlat = nlat - 90;
     }
+    */
+    let nlon = (lon - 10.25);
+    if (nlon<=-180){
+        nlon = nlon + 180;
+    }
+    let nlat = (lat + 0.1);
+    if (nlat>=90){
+        nlat = nlat - 90;
+    }
+
     nlon = ((nlon+180)/360)*100;
     nlat = 100-((nlat+90)/180)*100;
-    
-    nlon = nlon+0.65;
-    nlat = nlat-2.3;
 
     console.log(nlon,nlat);
-    my_pin.setAttribute("style", `position:absolute;top:${nlat}%;left:${nlon}%;`);
+    my_pin.setAttribute("style", `position:absolute;top:${nlat}%;left:${nlon}%;transform:translate(-50%,-99%);`);
     
 }
 

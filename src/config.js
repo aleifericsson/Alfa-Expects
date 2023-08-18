@@ -26,5 +26,5 @@ const decrypt = async (passcode) => {
 
 export default decrypt;
 
-//middle longitude: 14
-//middle latitude: -1;
+//middle longitude: 10.25
+//middle latitude: -0.4
