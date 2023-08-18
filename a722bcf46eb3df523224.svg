@@ -77,7 +77,7 @@
 .circle
 {
    opacity:0;
-   fill:#9ee3cc;
+   fill:#9cc3ee;
    fill-opacity:1;
    stroke:black;
    stroke-width:0.5;
@@ -91,7 +91,7 @@
  */
 .land
 {
-   fill: #9ee3cc;
+   fill: #9cc3ee;
    fill-opacity: 1;
    stroke:#242424;
    stroke-opacity: 1;
@@ -136,7 +136,7 @@
 
 .aq
 {
-   fill:#9ee3cc;
+   fill:#9cc3ee;
 }
 
 /*
@@ -145,7 +145,7 @@
 
 .ocean
 {
-   opacity: 1;
+   opacity: 0;
    color: #242424;
    fill:#242424;
    fill-opacity:0;
