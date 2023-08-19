@@ -48,7 +48,7 @@ const updateDays = () => {
     day_disp_list.forEach(day => stack.appendChild(day));
 
     const city = document.querySelector(".city");
-    city.textContent = `${day_list[0].city}, ${day_list[0].country}`
+    city.innerHTML = `${day_list[0].city}, ${day_list[0].country}`
 }
 
 const weatherDay = (day,icon,hotness) => {

@@ -35,7 +35,6 @@ const background = () => {
 }
 
 const updatePin = (lon,lat) => {
-    console.log(lon,lat)
     const my_pin = document.querySelector(".pin");
 
     /*
@@ -50,17 +49,15 @@ const updatePin = (lon,lat) => {
     */
     let nlon = (lon - 10.25);
     if (nlon<=-180){
-        nlon = nlon + 180;
+        nlon = nlon + 360;
     }
     let nlat = (lat + 0.1);
     if (nlat>=90){
-        nlat = nlat - 90;
+        nlat = nlat - 180;
     }
 
     nlon = ((nlon+180)/360)*100;
     nlat = 100-((nlat+90)/180)*100;
-
-    console.log(nlon,nlat);
     my_pin.setAttribute("style", `position:absolute;top:${nlat}%;left:${nlon}%;transform:translate(-50%,-99%);`);
     
 }

@@ -17,8 +17,8 @@
     color: whitesmoke;
     align-items: center;
     padding:5px;
-    transition: cubic-bezier(1,0,0,1);
-    transition-duration: 500ms;
+    transition: cubic-bezier(0.28, 0.46, 0.29, 1.07);
+    transition-duration: 750ms;
 }
 
 .title{

@@ -1,6 +1,7 @@
 import './form.css';
 
 
+
 const form = () => {
     const frame = document.createElement("form");
     frame.classList.add("form");
@@ -17,7 +18,6 @@ const form = () => {
     submit.setAttribute("id","submit");
     submit.textContent = "Submit";
     frame.appendChild(submit);
-
     
     return frame;
 }

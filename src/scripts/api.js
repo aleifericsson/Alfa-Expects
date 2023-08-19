@@ -5,15 +5,9 @@ import {updateDays} from '../ui/weatherDisp.js';
 import {updateBox} from '../ui/box.js';
 import {updatePin} from '../ui/background.js';
 
-const api = async () => {
-    let city;
-    let url=document.URL;
-    const index = url.lastIndexOf('=');
-    if (index == -1){
-        city = "manchester"
-    }
-    else{
-        city = url.substring(index+1);
+const api = async (city) => {
+    if (city==""){
+        return;
     }
 
     const myst1 = await mystery();
@@ -22,6 +16,7 @@ const api = async () => {
     let city_info = await response.json()
     
     if (city_info.cod === "404"){
+        return;
         city = "manchester";
         const response2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${myst}`);
         city_info = await response2.json()

@@ -54,3 +54,8 @@
     width:90.9%;
     height:90.4%;
  }
+
+ .pin{
+    transition: cubic-bezier(0.28, 0.46, 0.29, 1.07);
+    transition-duration: 750ms;
+ }
